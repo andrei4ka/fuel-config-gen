@@ -15,6 +15,7 @@ curl http://127.0.0.1:8000/api/nodes/
 
 ##Configuration
 To change provisioning/deployment mode you need to modify the script itself. The script has a lot of comments and in most cases you should have no questions.
+Basically you just need to modify 2-3 lines in the script and probably network settings.
 
 **1.** Once you boot your Fuel slave nodes in bootstrap mode, you need to get a list of discovered nodes by running the following command from your Fuel-PM
 <pre>
@@ -40,7 +41,7 @@ role = { 'primary-controller': '', 'controller': '1', 'compute': '2,3,4', 'quant
 <pre>
 boot_dev = "sda"
 </pre>
-if you use KVM then it should be:
+if you use KVM then it should be (in case if you use **virtio** driver):
 <pre>
 boot_dev = "vda"
 </pre>
